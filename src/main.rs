@@ -1,6 +1,6 @@
 fn main(){
 
-    //control flow
+    //conditionals flow
 
     let num = 600;
 
@@ -43,6 +43,19 @@ fn main(){
         _=> category = 'D'
     };
 
-    println!("this is category {category}")
+    println!("this is category {category}");
+
+    let match_with_tuple = ('a','b');
+
+    let value = match match_with_tuple {
+        ('a', y) =>{ 
+            println!("this has a, second value is {}",y);
+    y
+}
+        (z, 'b') => {println!("this has b, first value is {}",z); z},
+        (a,b) => {println!("this is both values {},{}", a,b); a}   
+    };
+
+    println!{"this is value{value:?}"};
     
 }
