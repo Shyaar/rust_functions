@@ -31,5 +31,18 @@ fn main(){
     let student_1 = get_grade(50, "john");
 
     println!("this is student 1s grade {student_1:?}");
+
+
+    let salary = 40;
+    let mut category = 'A';
+
+    match salary {
+        90..=100 => category = 'A',
+        80..=89 => category = 'B',
+        70..=79 => category = 'C',
+        _=> category = 'D'
+    };
+
+    println!("this is category {category}")
     
 }
