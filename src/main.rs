@@ -24,12 +24,21 @@ fn prnt_num (mut x: i32){
     println!("{x}")
 }
 
+
+fn shad_x (x: i32){
+    let mut x = x;
+
+    x= x+2;
+    println!("{x}")
+}
 fn main(){
 
-    let mut x = 25;
+    let  x = 25;
+
     prnt_num(x);
 
-    p
+    shad_x(x);
+
 }
 
 
