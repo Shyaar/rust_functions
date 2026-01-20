@@ -47,5 +47,45 @@ fn main() {
         format!("{first_name} {last_name}")       
     };
 
-    println!("{full_name}")
+    println!("{full_name}");
+
+    // practicing tuples arrays and vectors
+
+    let user_info :(&str, i8, &str) = ("Doe", 28, "Lawyer");
+
+    let user_name = user_info.0;
+    let user_age = user_info.1;
+    let user_job = user_info.2;
+
+    println!("this is user name{}, this is user age {}, this is user jos {}", user_name, user_age,user_job);
+
+    let (user_name1, user_age1, user_job1) = user_info;
+
+    let user_information = user_info;
+    println!("this is user info: {:?}", user_information);
+
+
+    let scores:[i8; 5] = [1,2,3,4,5];
+
+    println!("this are user info {user_name1}, {user_age1}, {user_job1}");
+
+    println!("this is scores{:?}", scores);
+
+
+    let score1: i8 = scores[0];
+    let score2: i8 = scores[1];
+
+    println!("this is score 1{score1}, this is score 2{score2}");
+
+    let mut vector_data: Vec<i8> = vec![1,2,3,4,5,6,7];
+
+    let vec1: i8 = vector_data[0];
+
+    vector_data.push(3);
+
+    let vec7 = vector_data[6];
+
+    println!("this is vector data {:?}", vector_data,);
+
+    println!("this is vec7 {vec7}");
 }
