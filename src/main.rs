@@ -77,14 +77,61 @@ fn main(){
 
     // println!("this is t {t}")
 
-    let pairs: Vec<(&str, i32)> = vec![("john", 32), ("mary",43)];
+    // let pairs: Vec<(&str, i32)> = vec![("john", 32), ("mary",43)];
 
-    let pairing:[(i32, i8); 2] = [(3,6),(4,5)];
+    // let pairing:[(i32, i8); 2] = [(3,6),(4,5)];
 
-    println!("this is array of arrays {:?}", pairing);
+    // println!("this is array of arrays {:?}", pairing);
 
-    for (name,age) in pairs{
-        println!("{},{}", name, age)
+    // for (name,age) in pairs{
+    //     println!("{},{}", name, age)
+    // }
+
+    let n: i32 = 5;
+
+    let mut square_of_sum = 0;
+    let mut sum_of_square = 0;
+
+    let mut sq = 0;
+    let mut s=0;
+
+
+   fn squar_sum(sum: i32)-> i32{
+        sum ^2
     }
+
+    square_of_sum = squar_sum(s);
+
+    for i in 1..=n {
+        s = s+i; 
+        println!("this is s{s}");
+    };
+
+    for j in 1..n {
+        sq = sq*2 + j*2;
+        println!("this is sq{sq}");
+    };
+
+
+
+    // this is single line comment 
+    // you have to start with a double slash at the begining of every line to comment 
+
+    /*this is multi line comment
+    it spans from the begining of the "/*" to "*/"
+     */
+
+    //print 
+
+    // to print, there are 2 ways, 
+    //print! which doesnt specify line to print and if there are multiple prints, it owuld print all on the same line
+
+    print!("this is the line to print");
+    print!("this is another different line to print");
+
+    // the println! on the other hand would print each on a different line
+    println!("this is the line to print");
+    println!("this is another different line to print");
+
     
 }
