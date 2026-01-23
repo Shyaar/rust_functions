@@ -1,8 +1,7 @@
 //control flow
 
-fn main(){
-
-//simple loop
+fn main() {
+    //simple loop
     // loop{
     //     println!("this is loop");
     //     break;
@@ -43,14 +42,12 @@ fn main(){
     //     println!("i = {i}")
     // }
 
-
     //iterating with a step size
     // for this we use a stepby method
 
     // for i in (0..=10).step_by(2){
     //     println!("i = {i}")
     // }
-
 
     //rust ranges cant handle floats
     // 0.0..=0.9 is invalid
@@ -66,11 +63,10 @@ fn main(){
     //     }
     // }
 
-
     //.. type is a valid type in rust
 
     let _r = 0..4;
-    
+
     // let mut t: String = String::from ("shta");
 
     // t.push('t');
@@ -93,37 +89,35 @@ fn main(){
     let mut sum_of_square = 0;
 
     let mut sq = 0;
-    let mut s=0;
+    let mut s = 0;
 
-
-   fn squar_sum(sum: i32)-> i32{
-        sum ^2
+    fn squar_sum(sum: i32) -> i32 {
+        sum ^ 2
     }
 
     square_of_sum = squar_sum(s);
 
     for i in 1..=n {
-        s = s+i; 
+        s = s + i;
         println!("this is s{s}");
-    };
+    }
 
     for j in 1..n {
-        sq = sq*2 + j*2;
+        sq = sq * 2 + j * 2;
         println!("this is sq{sq}");
-    };
+    }
 
-
-
-    // this is single line comment 
-    // you have to start with a double slash at the begining of every line to comment 
+    // this is single line comment
+    // you have to start with a double slash at the begining of every line to comment
 
     /*this is multi line comment
-    it spans from the begining of the "/*" to "*/"
+    it spans from the begining of the "/*" to "*/
+"
      */
 
-    //print 
+    //print
 
-    // to print, there are 2 ways, 
+    // to print, there are 2 ways,
     //print! which doesnt specify line to print and if there are multiple prints, it owuld print all on the same line
 
     print!("this is the line to print");
@@ -133,5 +127,18 @@ fn main(){
     println!("this is the line to print");
     println!("this is another different line to print");
 
+    //escape sequence/
+    // this is used in formatting to tell rust that some characters should be treated differently
+    // the escape sequence is depicted with a backslash
+
+
+    /*
+        \n = new line
+        \t = tab
+        \" = double quotes etc
+     */
+
     
+    println!("this is the first line \n this is the second line");
+    println!("\t this is the first line this is the second line");
 }
