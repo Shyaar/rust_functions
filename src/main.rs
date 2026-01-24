@@ -1,15 +1,39 @@
+// ownership in rust 
+
 fn main(){
-    // associativity
-    // when same operators are successive and follow each other, rust handles it from left to right meaning, it evaluate the first 2, then evaluates its value with the next
+    // in rust, each value has a variable as it owner
+    // there can only be one owner of a (heap) value, thus two variable cannot own the same value;
+    // if the owner goes out of scope, the value is dropped
 
-    let a = 8/2/2;
-    //this equals (8/2)/2 
+    let a =String::from ("given");
+    let b =a;
+    let c = b;
 
-    // when we use assignment, it evaluates from right to left... meaning it evaluates the value first before the variable
-    let b = 40;
-    // first it evelaute 40 before it evaluates b as = 40
+    // here, strings are stored on the heap, when we move owner from a to b, a is no longer accessoble on the heap, be now owns the value give. same goes when the value is moved from b to c
 
-    // thus when we do b=y=0 because y=0 is evaluated first and y = 0 being a statement returns a unit type, b throws a mismatch error,
+    // println!("this is a {a}, this is b {b}");
 
-    
+    // to solve this we can clone or borrow;;
+
+    let z =String::from("read");
+    let y = z.clone();
+
+    // this would clone z into y thus having different allocations of the same value in the heap;; or
+
+    let x = &z;
+
+
+    // values also only live within their scope//
+
+    {
+        let w = z;
+    }
+
+    // let e = w; we get this error cannot find value `w` in this scope:: because after the block scope, w is droped and inaccessible
+
+
+
+  
+
+
 }
