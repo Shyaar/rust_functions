@@ -1,5 +1,7 @@
 //control flow
 
+use std::{fmt::Arguments, os::linux::raw::stat};
+
 fn main() {
     //simple loop
     // loop{
@@ -131,14 +133,56 @@ fn main() {
     // this is used in formatting to tell rust that some characters should be treated differently
     // the escape sequence is depicted with a backslash
 
-
     /*
-        \n = new line
-        \t = tab
-        \" = double quotes etc
-     */
+       \n = new line
+       \t = tab
+       \" = double quotes etc
+    */
 
-    
     println!("this is the first line \n this is the second line");
     println!("\t this is the first line this is the second line");
+    println!("this is the first line \r this is the second line");
+
+    // positional Arguments
+    // this is used to set print positions
+
+    println!(
+        "this is to print in order given {2} {1} {0}",
+        "rust", "world", "hello"
+    );
+
+    // to print hello world rust
+
+    // named argurment allow you to create arguements and pass their value:
+
+    println!(
+        "{language} is cool to work with in this {century}",
+        language = "rust",
+        century = 21
+    );
+
+    // variables
+
+    let x = 34;
+    // the value of x is unused...
+    // you can use an _ to tell the compiler that you are aware that it is unused
+
+    let _a = 34;
+
+    // variables use the snake case
+    let _alpha_value = 43;
+
+    // statics vs constants
+    // both must have explicit type anotation
+    //both are declared with inverse snake case, with an underscore between words and all upper case
+    // statics are like constants i.e they are global variable and can be accessed any where even outside their block
+
+    // however, statics have a memory allocation when initialized, while constants dont and can only be accesed inline by initializing it to another variable... simply copies and paste the value to the new variable
+
+    const _A: i8=32;
+    static _B:i8 = 43;
+
+
+
+
 }
