@@ -1,35 +1,15 @@
 fn main(){
-    //arithmethic operatos
-    // +_*%/
-    // rust doesnt exponent like other languages using ^
-    // rust uses pow() method for expo
+    // associativity
+    // when same operators are successive and follow each other, rust handles it from left to right meaning, it evaluate the first 2, then evaluates its value with the next
 
-    // comparison operators compares two values and returns a bool
-    // ==, >=, <=, !=, <, >
-    // equality is not same as assignment == & =
+    let a = 8/2/2;
+    //this equals (8/2)/2 
 
-    //logical operators
-    // combining multiple bools conditions 
-    // &&, ||, !
+    // when we use assignment, it evaluates from right to left... meaning it evaluates the value first before the variable
+    let b = 40;
+    // first it evelaute 40 before it evaluates b as = 40
 
+    // thus when we do b=y=0 because y=0 is evaluated first and y = 0 being a statement returns a unit type, b throws a mismatch error,
 
-    // assignment ops are used to assign value to variables
-    // +=, -=, *=, /=, %=
-
-    //bitwise operators 
-    // perform binary operators, directly affecting them on binary level
-    // only used on integer numbers
-
-    //&, |, ^, ~, <<' >>
-
-    let mut x = 4;
-
-    x = x ^ x;
-
-    println!("this is binary x&X:::::::{x}");
-
-    //used mainly for system operation etc
     
-
-
 }
