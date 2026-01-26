@@ -7,9 +7,10 @@ fn give()-> String {
     String::from ("John doe")
 }
 
-// fn take_give(mut name: &str) -> &str{
-//     name = "firstname: ";
-// }
+fn take_give(mut _name: String ) -> String{
+    _name = String::from ("Jane Doe:");
+    _name
+}
 
 fn main(){
     // ownership in functions
@@ -32,9 +33,13 @@ fn main(){
     println!("this is name {name_of}");
 
     // // functions that take and return ownership
-    // let mut name = "name";
+    let name:String = take_give(name_of.clone());
 
-    // name = take_give(name);
+    println!("this is name of{name_of}");
+    println!("this is name {name}");
+
+    // functions that take and give ownership when the take ownership, the ownership is no longer available for use, same as covered... thus you must clone or refenence
+
 
     
 
