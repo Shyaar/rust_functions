@@ -77,4 +77,13 @@ fn main() {
     //we can now have a new scope of refs, thus we can go
     let r = &mut x;
     //and we dont get a reference error
+
+    // a refence must always be valid
+    // let vec1 = {
+    //     let vec2 =vec![1,2,3,4];
+    //     &vec2
+    // };
+
+    // println!("vector 1 {vec1:?}");
+
 }
