@@ -12,6 +12,11 @@ fn take_give(mut _name: String ) -> String{
     _name
 }
 
+
+fn stack(mut age: i32){
+    age = 24;
+    println!("this is age {age}")
+}
 fn main(){
     // ownership in functions
 
@@ -41,7 +46,14 @@ fn main(){
     // functions that take and give ownership when the take ownership, the ownership is no longer available for use, same as covered... thus you must clone or refenence
 
 
+    // stack only functions/ownership
+    let age = 43;
+    stack(age);
+    println!("this is initial age {age}");
+
     
+    
+
 
 
 }
