@@ -64,6 +64,11 @@ fn main(){
     let y = &mut x;
     let z = &mut x;
 
-    println!("this is y {y}");
-    println!("this is z")  
+    println!("this is y {y:?}");
+    println!("this is z {z:?}");
+
+    //we get an error because we are mutating a borrowed value 2 times
+    
+
+
 }
