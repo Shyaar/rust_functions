@@ -3,9 +3,13 @@ fn take(vec: Vec<i32>){
     println!("this is vec {vec:?}");
 }
 
-fn give()-> &str {
-    "name"
+fn give()-> String {
+    String::from ("John doe")
 }
+
+// fn take_give(mut name: &str) -> &str{
+//     name = "firstname: ";
+// }
 
 fn main(){
     // ownership in functions
@@ -19,12 +23,20 @@ fn main(){
     // can fix by clone
 
     take(vector.clone());
-    let c = vector;
+    let c = vector.clone();
 
-    // functions that give ownership back
-    let name_of = give()
-    println!("this is name {name_of}")
+    println!("{vector:?}");
 
+    // // functions that give ownership back
+    let name_of = give();
+    println!("this is name {name_of}");
+
+    // // functions that take and return ownership
+    // let mut name = "name";
+
+    // name = take_give(name);
+
+    
 
 
 }
