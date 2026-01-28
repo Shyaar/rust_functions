@@ -1,89 +1,32 @@
-// fn take(vec: Vec<i32>){
-//     println!("this is vec {vec:?}");
-// }
+fn take_in_borrow(vac: &Vec<i32>) {
+    let x = vac;
+    println!("this is x {x:?}");
+}
 
-// fn give()-> String {
-//     String::from ("John doe")
-// }
+fn format_mail(email: String){
+    let mut email = String::from (email);
+    email.push('@');
 
-// fn take_give(mut _name: String ) -> String{
-//     _name = String::from ("Jane Doe:");
-//     _name
-// }
+    println!("{email}");
 
-// fn stack(mut age: i32){
-//     age = 24;
-//     println!("this is age {age}")
-// }
-// fn main(){
-//     // ownership in functions
-
-//     //functions that take ownership
-//     // when we pass a heap value to a function, it has the same effect as passing a heap value to another variable and the value is moved to the new function
-
-//     let vector: Vec<i32> = vec![1,2,3,4,5];
-
-//     // take(vector);
-//     // can fix by clone
-
-//     take(vector.clone());
-//     let c = vector.clone();
-
-//     println!("{vector:?}");
-
-//     // // functions that give ownership back
-//     let name_of = give();
-//     println!("this is name {name_of}");
-
-//     // // functions that take and return ownership
-//     let name:String = take_give(name_of.clone());
-
-//     println!("this is name of{name_of}");
-//     println!("this is name {name}");
-
-//     // functions that take and give ownership when the take ownership, the ownership is no longer available for use, same as covered... thus you must clone or refenence
-
-//     // stack only functions/ownership
-//     let age = 43;
-//     stack(age);
-//     println!("this is initial age {age}");
-
-// }
-
+}
 fn main() {
-    //borrowing
-    // when borrowing, you can only have one mutable reference or multiple immutable reference
-    // a reference it identified by &
+    //borrowing in functions
 
-    let mut x: Vec<i32> = vec![1, 2, 3, 4, 5];
+    //functions that immutably borrow
 
-    let y = &x;
-    let z = &x;
+    let mut vec1 = vec![12, 34, 56];
 
-    //note, you can only either have one mutable, or multiple mutable references in the same scope, but not both
+    let ref1 = &vec1;
 
-    // thus,
-    //we get an error because we are mutating a borrowed value 2 times
-    // let w = &mut x;
+    take_in_borrow(&ref1);
+    let ref2 = &mut vec1;
 
-    println!("this is y {y:?}");
-    println!("this is z {z:?}");
+    println!("{vec1:?}");
 
-    // however, in rust refernce scope is tracked untill last used, thus when x and y are used, they are dropped in scope and referencing can start again
-    // thus
+    let email = String:: from("john");
+    format_mail(email);
 
-    let a = y;
-    let b= z;
-    //we can now have a new scope of refs, thus we can go
-    let r = &mut x;
-    //and we dont get a reference error
-
-    // a refence must always be valid
-    // let vec1 = {
-    //     let vec2 =vec![1,2,3,4];
-    //     &vec2
-    // };
-
-    // println!("vector 1 {vec1:?}");
-
+    //functions that mutably borrow
+    
 }
