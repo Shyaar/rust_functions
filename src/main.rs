@@ -19,6 +19,7 @@ fn main() {
 
     let mut _name = String::from("Henry");
     _name.push_str(" John");
+    let country = "denva";
 
     println!("{_name}");
 
