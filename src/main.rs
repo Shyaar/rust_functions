@@ -7,5 +7,11 @@ fn main(){
 
     println!("{}", *person);
 
+    let james = "james";
+
+    let _student = &james;
+
+
+
 
 }
