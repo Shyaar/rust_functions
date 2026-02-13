@@ -5,4 +5,7 @@ fn main(){
 
     println!("{} , {}", name, person);
 
+    println!("{}", *person);
+
+
 }
