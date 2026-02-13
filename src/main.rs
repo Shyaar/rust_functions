@@ -17,10 +17,15 @@ fn main() {
 
     let mut vec1 = vec![12, 34, 56];
 
+    let mut _name = String::from("Henry");
+    _name.push_str(" John");
+
+    println!("{_name}");
+
     let ref1 = &vec1;
 
     take_in_borrow(&ref1);
-    let ref2 = &mut vec1;
+    let _ref2 = &mut vec1;
 
     println!("{vec1:?}");
 
