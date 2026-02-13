@@ -1,6 +1,8 @@
 fn main(){
     let name = String::from("Boris");
-    drop(name);
 
-    println!("{name}");
+    let person = &name;
+
+    println!("{} , {}", name, person);
+
 }
